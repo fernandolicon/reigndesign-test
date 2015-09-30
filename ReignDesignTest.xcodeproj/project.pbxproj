@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A855B2B11BBCA2BA00129501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2B01BBCA2BA00129501 /* AppDelegate.swift */; };
+		A855B2B31BBCA2BA00129501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2B21BBCA2BA00129501 /* ViewController.swift */; };
+		A855B2B61BBCA2BA00129501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B41BBCA2BA00129501 /* Main.storyboard */; };
+		A855B2B81BBCA2BA00129501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B71BBCA2BA00129501 /* Assets.xcassets */; };
+		A855B2BB1BBCA2BA00129501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */; };
+		A855B2C61BBCA2BA00129501 /* ReignDesignTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2C51BBCA2BA00129501 /* ReignDesignTestTests.swift */; };
+		A855B2D11BBCA2BA00129501 /* ReignDesignTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2D01BBCA2BA00129501 /* ReignDesignTestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A855B2C21BBCA2BA00129501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A855B2A51BBCA2BA00129501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A855B2AC1BBCA2BA00129501;
+			remoteInfo = ReignDesignTest;
+		};
+		A855B2CD1BBCA2BA00129501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A855B2A51BBCA2BA00129501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A855B2AC1BBCA2BA00129501;
+			remoteInfo = ReignDesignTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A855B2AD1BBCA2BA00129501 /* ReignDesignTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReignDesignTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A855B2B01BBCA2BA00129501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A855B2B21BBCA2BA00129501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A855B2B51BBCA2BA00129501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A855B2B71BBCA2BA00129501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A855B2BA1BBCA2BA00129501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A855B2BC1BBCA2BA00129501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A855B2C11BBCA2BA00129501 /* ReignDesignTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReignDesignTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A855B2C51BBCA2BA00129501 /* ReignDesignTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReignDesignTestTests.swift; sourceTree = "<group>"; };
+		A855B2C71BBCA2BA00129501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A855B2CC1BBCA2BA00129501 /* ReignDesignTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReignDesignTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A855B2D01BBCA2BA00129501 /* ReignDesignTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReignDesignTestUITests.swift; sourceTree = "<group>"; };
+		A855B2D21BBCA2BA00129501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A855B2AA1BBCA2BA00129501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2BE1BBCA2BA00129501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2C91BBCA2BA00129501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A855B2A41BBCA2BA00129501 = {
+			isa = PBXGroup;
+			children = (
+				A855B2AF1BBCA2BA00129501 /* ReignDesignTest */,
+				A855B2C41BBCA2BA00129501 /* ReignDesignTestTests */,
+				A855B2CF1BBCA2BA00129501 /* ReignDesignTestUITests */,
+				A855B2AE1BBCA2BA00129501 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A855B2AE1BBCA2BA00129501 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2AD1BBCA2BA00129501 /* ReignDesignTest.app */,
+				A855B2C11BBCA2BA00129501 /* ReignDesignTestTests.xctest */,
+				A855B2CC1BBCA2BA00129501 /* ReignDesignTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A855B2AF1BBCA2BA00129501 /* ReignDesignTest */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2B01BBCA2BA00129501 /* AppDelegate.swift */,
+				A855B2B21BBCA2BA00129501 /* ViewController.swift */,
+				A855B2B41BBCA2BA00129501 /* Main.storyboard */,
+				A855B2B71BBCA2BA00129501 /* Assets.xcassets */,
+				A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */,
+				A855B2BC1BBCA2BA00129501 /* Info.plist */,
+			);
+			path = ReignDesignTest;
+			sourceTree = "<group>";
+		};
+		A855B2C41BBCA2BA00129501 /* ReignDesignTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2C51BBCA2BA00129501 /* ReignDesignTestTests.swift */,
+				A855B2C71BBCA2BA00129501 /* Info.plist */,
+			);
+			path = ReignDesignTestTests;
+			sourceTree = "<group>";
+		};
+		A855B2CF1BBCA2BA00129501 /* ReignDesignTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2D01BBCA2BA00129501 /* ReignDesignTestUITests.swift */,
+				A855B2D21BBCA2BA00129501 /* Info.plist */,
+			);
+			path = ReignDesignTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A855B2AC1BBCA2BA00129501 /* ReignDesignTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A855B2D51BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTest" */;
+			buildPhases = (
+				A855B2A91BBCA2BA00129501 /* Sources */,
+				A855B2AA1BBCA2BA00129501 /* Frameworks */,
+				A855B2AB1BBCA2BA00129501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReignDesignTest;
+			productName = ReignDesignTest;
+			productReference = A855B2AD1BBCA2BA00129501 /* ReignDesignTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A855B2C01BBCA2BA00129501 /* ReignDesignTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A855B2D81BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTestTests" */;
+			buildPhases = (
+				A855B2BD1BBCA2BA00129501 /* Sources */,
+				A855B2BE1BBCA2BA00129501 /* Frameworks */,
+				A855B2BF1BBCA2BA00129501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A855B2C31BBCA2BA00129501 /* PBXTargetDependency */,
+			);
+			name = ReignDesignTestTests;
+			productName = ReignDesignTestTests;
+			productReference = A855B2C11BBCA2BA00129501 /* ReignDesignTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A855B2CB1BBCA2BA00129501 /* ReignDesignTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A855B2DB1BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTestUITests" */;
+			buildPhases = (
+				A855B2C81BBCA2BA00129501 /* Sources */,
+				A855B2C91BBCA2BA00129501 /* Frameworks */,
+				A855B2CA1BBCA2BA00129501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A855B2CE1BBCA2BA00129501 /* PBXTargetDependency */,
+			);
+			name = ReignDesignTestUITests;
+			productName = ReignDesignTestUITests;
+			productReference = A855B2CC1BBCA2BA00129501 /* ReignDesignTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A855B2A51BBCA2BA00129501 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Luis Fernando Mata";
+				TargetAttributes = {
+					A855B2AC1BBCA2BA00129501 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A855B2C01BBCA2BA00129501 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = A855B2AC1BBCA2BA00129501;
+					};
+					A855B2CB1BBCA2BA00129501 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = A855B2AC1BBCA2BA00129501;
+					};
+				};
+			};
+			buildConfigurationList = A855B2A81BBCA2BA00129501 /* Build configuration list for PBXProject "ReignDesignTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A855B2A41BBCA2BA00129501;
+			productRefGroup = A855B2AE1BBCA2BA00129501 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A855B2AC1BBCA2BA00129501 /* ReignDesignTest */,
+				A855B2C01BBCA2BA00129501 /* ReignDesignTestTests */,
+				A855B2CB1BBCA2BA00129501 /* ReignDesignTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A855B2AB1BBCA2BA00129501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A855B2BB1BBCA2BA00129501 /* LaunchScreen.storyboard in Resources */,
+				A855B2B81BBCA2BA00129501 /* Assets.xcassets in Resources */,
+				A855B2B61BBCA2BA00129501 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2BF1BBCA2BA00129501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2CA1BBCA2BA00129501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A855B2A91BBCA2BA00129501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A855B2B31BBCA2BA00129501 /* ViewController.swift in Sources */,
+				A855B2B11BBCA2BA00129501 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2BD1BBCA2BA00129501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A855B2C61BBCA2BA00129501 /* ReignDesignTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855B2C81BBCA2BA00129501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A855B2D11BBCA2BA00129501 /* ReignDesignTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A855B2C31BBCA2BA00129501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A855B2AC1BBCA2BA00129501 /* ReignDesignTest */;
+			targetProxy = A855B2C21BBCA2BA00129501 /* PBXContainerItemProxy */;
+		};
+		A855B2CE1BBCA2BA00129501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A855B2AC1BBCA2BA00129501 /* ReignDesignTest */;
+			targetProxy = A855B2CD1BBCA2BA00129501 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A855B2B41BBCA2BA00129501 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A855B2B51BBCA2BA00129501 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A855B2BA1BBCA2BA00129501 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A855B2D31BBCA2BA00129501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A855B2D41BBCA2BA00129501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A855B2D61BBCA2BA00129501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReignDesignTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A855B2D71BBCA2BA00129501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReignDesignTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A855B2D91BBCA2BA00129501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReignDesignTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReignDesignTest.app/ReignDesignTest";
+			};
+			name = Debug;
+		};
+		A855B2DA1BBCA2BA00129501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReignDesignTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReignDesignTest.app/ReignDesignTest";
+			};
+			name = Release;
+		};
+		A855B2DC1BBCA2BA00129501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ReignDesignTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ReignDesignTest;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A855B2DD1BBCA2BA00129501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ReignDesignTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ReignDesignTest;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A855B2A81BBCA2BA00129501 /* Build configuration list for PBXProject "ReignDesignTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855B2D31BBCA2BA00129501 /* Debug */,
+				A855B2D41BBCA2BA00129501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A855B2D51BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855B2D61BBCA2BA00129501 /* Debug */,
+				A855B2D71BBCA2BA00129501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A855B2D81BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855B2D91BBCA2BA00129501 /* Debug */,
+				A855B2DA1BBCA2BA00129501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A855B2DB1BBCA2BA00129501 /* Build configuration list for PBXNativeTarget "ReignDesignTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855B2DC1BBCA2BA00129501 /* Debug */,
+				A855B2DD1BBCA2BA00129501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A855B2A51BBCA2BA00129501 /* Project object */;
+}
