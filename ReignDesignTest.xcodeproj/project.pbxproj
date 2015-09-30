@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A855B2B11BBCA2BA00129501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2B01BBCA2BA00129501 /* AppDelegate.swift */; };
-		A855B2B31BBCA2BA00129501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2B21BBCA2BA00129501 /* ViewController.swift */; };
 		A855B2B61BBCA2BA00129501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B41BBCA2BA00129501 /* Main.storyboard */; };
 		A855B2B81BBCA2BA00129501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B71BBCA2BA00129501 /* Assets.xcassets */; };
 		A855B2BB1BBCA2BA00129501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */; };
 		A855B2C61BBCA2BA00129501 /* ReignDesignTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2C51BBCA2BA00129501 /* ReignDesignTestTests.swift */; };
 		A855B2D11BBCA2BA00129501 /* ReignDesignTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2D01BBCA2BA00129501 /* ReignDesignTestUITests.swift */; };
+		A855B2DF1BBCA34800129501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2DE1BBCA34800129501 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A855B2E11BBCA35000129501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2E01BBCA35000129501 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,6 @@
 
 /* Begin PBXFileReference section */
 		A855B2AD1BBCA2BA00129501 /* ReignDesignTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReignDesignTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A855B2B01BBCA2BA00129501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A855B2B21BBCA2BA00129501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A855B2B51BBCA2BA00129501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A855B2B71BBCA2BA00129501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A855B2BA1BBCA2BA00129501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		A855B2CC1BBCA2BA00129501 /* ReignDesignTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReignDesignTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A855B2D01BBCA2BA00129501 /* ReignDesignTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReignDesignTestUITests.swift; sourceTree = "<group>"; };
 		A855B2D21BBCA2BA00129501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A855B2DE1BBCA34800129501 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Views/ViewController.swift; sourceTree = "<group>"; };
+		A855B2E01BBCA35000129501 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,10 @@
 		A855B2AF1BBCA2BA00129501 /* ReignDesignTest */ = {
 			isa = PBXGroup;
 			children = (
-				A855B2B01BBCA2BA00129501 /* AppDelegate.swift */,
-				A855B2B21BBCA2BA00129501 /* ViewController.swift */,
-				A855B2B41BBCA2BA00129501 /* Main.storyboard */,
+				A855B2E21BBCA35B00129501 /* Application */,
+				A855B2E31BBCA36B00129501 /* UI */,
+				A855B2E41BBCA37200129501 /* Views */,
 				A855B2B71BBCA2BA00129501 /* Assets.xcassets */,
-				A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */,
-				A855B2BC1BBCA2BA00129501 /* Info.plist */,
 			);
 			path = ReignDesignTest;
 			sourceTree = "<group>";
@@ -123,6 +121,32 @@
 				A855B2D21BBCA2BA00129501 /* Info.plist */,
 			);
 			path = ReignDesignTestUITests;
+			sourceTree = "<group>";
+		};
+		A855B2E21BBCA35B00129501 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2E01BBCA35000129501 /* AppDelegate.swift */,
+				A855B2BC1BBCA2BA00129501 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		A855B2E31BBCA36B00129501 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2B41BBCA2BA00129501 /* Main.storyboard */,
+				A855B2B91BBCA2BA00129501 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A855B2E41BBCA37200129501 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A855B2DE1BBCA34800129501 /* ViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +211,7 @@
 		A855B2A51BBCA2BA00129501 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Luis Fernando Mata";
 				TargetAttributes = {
@@ -255,8 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A855B2B31BBCA2BA00129501 /* ViewController.swift in Sources */,
-				A855B2B11BBCA2BA00129501 /* AppDelegate.swift in Sources */,
+				A855B2E11BBCA35000129501 /* AppDelegate.swift in Sources */,
+				A855B2DF1BBCA34800129501 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,10 +421,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ReignDesignTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -407,7 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ReignDesignTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RDT.ReignDesignTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
