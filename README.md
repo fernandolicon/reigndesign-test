@@ -15,6 +15,8 @@ pod install
 ### Pods used
 **Alamofire** - Used to perform requests to the server in an easy way.
 
-**Realm** - A new database for iOS
+**Realm** - A new database for iOS.
 
-**PullToRefreshSwift** - An easy way to implement a pull to refresh in Swift
+**PullToRefreshSwift** - An easy way to implement a pull to refresh in Swift.
+
+**Reachability.swift** - Library used to check if user has an active internet connection.
