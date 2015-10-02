@@ -58,6 +58,8 @@ class Entry: Object {
            entriesArray.insert(entry, atIndex: counter++)
         }
         
+        entriesArray = entriesArray.sort({$0.createdAt.compare($1.createdAt) == .OrderedDescending })
+        
         return entriesArray
     }
     

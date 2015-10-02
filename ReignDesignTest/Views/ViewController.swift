@@ -22,10 +22,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         entriesTableView.rowHeight = UITableViewAutomaticDimension
         
-        //Add pull to refresh action
         self.addPullToRefreshToTable()
         
+        //Start checking if user has an available internet connection
         requestHelper.startNetworkNotifier()
+        
         self.requestData()
     }
     
@@ -39,23 +40,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func requestData(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         progressView.show()
+        
+        //Make server request
         requestHelper.getNewsByDate({ () -> Void in
             self.savedDataFromServer()
             }) { () -> Void in
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                self.progressView.hide()
-                //If there was an error, notify the user and keep data
-                dispatch_async(dispatch_get_main_queue()) {
-                    ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
-                }
+                self.receivedErrorFromServer()
         }
     }
     
     func savedDataFromServer(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         progressView.hide()
+        //If the connection was successful then get all data from database and reload table
         entriesArray = Entry.getAllEntries()
         entriesTableView.reloadData()
+    }
+    
+    func receivedErrorFromServer(){
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        self.progressView.hide()
+        //If there was an error, notify the user and keep local data
+        dispatch_async(dispatch_get_main_queue()) {
+            ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
+        }
     }
     
     // MARK: - Table view data source
@@ -76,6 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let provisionalEntry = entriesArray[indexPath.row] as Entry
         cell.textLabel!.text = provisionalEntry.title
+        //Get detail string, author and time since it was posted
         let detailString = "\(provisionalEntry.author) - \(ViewHelper.calculateTimeFromCreation(provisionalEntry))"
         cell.detailTextLabel!.text = detailString
         
@@ -139,4 +148,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 }
-
