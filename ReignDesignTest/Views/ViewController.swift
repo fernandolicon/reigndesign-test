@@ -14,12 +14,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var entriesArray = Entry.getAllEntries()
     var userSelectedEntry = Entry()
     let requestHelper = RequestHelper()
-    let progressView = ViewHelper.createProgressView()
     @IBOutlet weak var entriesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         entriesTableView.rowHeight = UITableViewAutomaticDimension
         
         self.addPullToRefreshToTable()
@@ -34,6 +34,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        //progressView.hide()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,7 +48,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func requestData(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        progressView.show()
         
         //Make server request
         requestHelper.getNewsByDate({ () -> Void in
@@ -55,7 +59,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func savedDataFromServer(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        progressView.hide()
         //If the connection was successful then get all data from database and reload table
         entriesArray = Entry.getAllEntries()
         entriesTableView.reloadData()
@@ -63,11 +66,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func receivedErrorFromServer(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        self.progressView.hide()
         //If there was an error, notify the user and keep local data
-        dispatch_async(dispatch_get_main_queue()) {
-            ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
-        }
+        ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
     }
     
     // MARK: - Table view data source
@@ -105,6 +105,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let selectedEntry = entriesArray[indexPath.row] as Entry
         let entryUrl = selectedEntry.entryUrl
+        
         
         //First we check if the user has a valid network connection
         if requestHelper.isNetworkAvailable{

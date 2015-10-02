@@ -11,13 +11,11 @@ import UIKit
 class EntryWebViewController: UIViewController, UIWebViewDelegate {
     
     var entryUrlString = ""
-    let progressView = ViewHelper.createProgressView()
     @IBOutlet weak var entryWebView: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        progressView.show()
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -28,6 +26,10 @@ class EntryWebViewController: UIViewController, UIWebViewDelegate {
         entryWebView.delegate = self
         entryWebView.loadRequest(request)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,6 +38,5 @@ class EntryWebViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        progressView.hide()
     }
 }
