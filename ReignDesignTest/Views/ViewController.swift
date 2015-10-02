@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PullToRefreshSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -20,6 +21,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         entriesTableView.rowHeight = UITableViewAutomaticDimension
+        
+        //Add pull to refresh action
+        self.addPullToRefreshToTable()
         
         requestHelper.startNetworkNotifier()
         self.requestData()
@@ -66,7 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("entryCell") as UITableViewCell!
-        //We will make this so cell adjusts title
+        //We will make this so cell adjusts to title length
         cell.textLabel?.lineBreakMode = .ByWordWrapping
         cell.textLabel?.numberOfLines = 0
         
@@ -115,6 +119,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             entriesArray.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
+    }
+    
+    //MARK: Pull to refresh methods
+    
+    func addPullToRefreshToTable(){
+        entriesTableView.addPullToRefresh({ [weak self] in
+            // refresh code
+            self?.requestData()
+            })
     }
     
     //MARK: - Navigation

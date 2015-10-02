@@ -28,7 +28,6 @@ class RequestHelper: NSObject {
                     if entriesDictionary != nil{
                         //Delete all previous saved entries
                         Entry.deleteAllEntries()
-                        //After that, get all the entries returned by the server
                         
                         //Iterate over the dictionary to create all the entries
                         for entryDictionary in entriesDictionary!{
