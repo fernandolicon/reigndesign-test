@@ -19,6 +19,8 @@ class EntryWebViewController: UIViewController, UIWebViewDelegate {
         
         progressView.show()
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
 
         // Transform sent url string to url and load the web view
         let entryUrl = NSURL(string: entryUrlString)!
