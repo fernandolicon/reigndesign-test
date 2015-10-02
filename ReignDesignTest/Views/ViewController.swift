@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        entriesTableView.rowHeight = UITableViewAutomaticDimension
+        
         requestHelper.startNetworkNotifier()
         self.requestData()
     }
@@ -28,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    //Mark: - Data methods
+    //MARK: - Data methods
     
     func requestData(){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -64,11 +66,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("entryCell") as UITableViewCell!
+        //We will make this so cell adjusts title
+        cell.textLabel?.lineBreakMode = .ByWordWrapping
+        cell.textLabel?.numberOfLines = 0
         
         let provisionalEntry = entriesArray[indexPath.row] as Entry
         cell.textLabel!.text = provisionalEntry.title
+        let detailString = "\(provisionalEntry.author) - \(ViewHelper.calculateTimeFromCreation(provisionalEntry))"
+        cell.detailTextLabel!.text = detailString
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
     
     // MARK:  Table view delegate

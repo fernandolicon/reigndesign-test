@@ -20,19 +20,25 @@ class RequestHelper: NSObject {
         if isNetworkAvailable {
             Alamofire.request(.GET, GlobalConstants.ServerAddress.address)
                 .responseJSON { response in
-                    //Delete all previous saved entries
-                    Entry.deleteAllEntries()
-                    //Now get the response
+                    //Get the response
                     let responseDictionary = response.2.value as! NSDictionary
-                    //After that, get all the entries returned by the server
-                    let entriesDictionary = responseDictionary.objectForKey("hits") as! NSArray
+                    let entriesDictionary = responseDictionary.objectForKey("hits") as? NSArray
                     
-                    //Iterate over the dictionary to create all the entries
-                    for entryDictionary in entriesDictionary{
-                        let entry = Entry()
-                        entry.saveEntryWithDictionary(entryDictionary as! NSDictionary)
+                    //Now we need to check if the response data is what we expected, if not, send error to user
+                    if entriesDictionary != nil{
+                        //Delete all previous saved entries
+                        Entry.deleteAllEntries()
+                        //After that, get all the entries returned by the server
+                        
+                        //Iterate over the dictionary to create all the entries
+                        for entryDictionary in entriesDictionary!{
+                            let entry = Entry()
+                            entry.saveEntryWithDictionary(entryDictionary as! NSDictionary)
+                        }
+                        success()
+                    }else{
+                        failure()
                     }
-                    success()
             }
         }else{
             failure()

@@ -20,3 +20,5 @@ pod install
 **PullToRefreshSwift** - An easy way to implement a pull to refresh in Swift.
 
 **Reachability.swift** - Library used to check if user has an active internet connection.
+
+**MediumProgressView** - A Medium app like progress view, to give the user some feedbakc that data is being downloaded from server.
