@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var entriesArray = try! Realm().objects(Entry)
+    var entriesArray = Entry.getAllEntries()
+    var userSelectedEntry = Entry()
     let requestHelper = RequestHelper()
+    let progressView = ViewHelper.createProgressView()
     @IBOutlet weak var entriesTableView: UITableView!
     
     override func viewDidLoad() {
@@ -30,26 +31,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //Mark: - Data methods
     
     func requestData(){
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        progressView.show()
         requestHelper.getNewsByDate({ () -> Void in
             self.savedDataFromServer()
             }) { () -> Void in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                self.progressView.hide()
                 //If there was an error, notify the user and keep data
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.showErrorToUser("Network error", message: "There's no internet connection, please try again later.")
+                    ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
                 }
         }
     }
     
     func savedDataFromServer(){
-        entriesArray = try! Realm().objects(Entry)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        progressView.hide()
+        entriesArray = Entry.getAllEntries()
         entriesTableView.reloadData()
-    }
-    
-    func showErrorToUser(withTitle: String, message: String){
-        let alertView = UIAlertController (title: title, message: message, preferredStyle: .Alert)
-        let okButton = UIAlertAction(title: "Ok", style: .Default, handler:nil)
-        alertView.addAction(okButton)
-        self.presentViewController(alertView, animated: true, completion:nil)
     }
     
     // MARK: - Table view data source
@@ -82,12 +82,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if requestHelper.isNetworkAvailable{
             //After that we need to check if the selected entry has a valid url (as some of them can be null
             if entryUrl != ""{
-                
+                userSelectedEntry = entriesArray[indexPath.row] as Entry
+                self.performSegueWithIdentifier("showEntry", sender: self)
             }else{
-                showErrorToUser("No webpage", message: "The entry you selected doesn't have a valid webpage.")
+                ViewHelper.showMessageToUser("No webpage", message: "The entry you selected doesn't have a valid webpage.", viewController: self)
             }
         }else{
-            self.showErrorToUser("Network error", message: "There's no internet connection, please try again later.")
+            ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        //Delete object from list and database
+        if editingStyle == .Delete{
+            let deletedEntry = entriesArray[indexPath.row]
+            Entry.deleteEntry(deletedEntry)
+            entriesArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
+    //MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showEntry"{
+            let nextVC = segue.destinationViewController as! EntryWebViewController
+            nextVC.entryUrlString = userSelectedEntry.entryUrl
         }
     }
 }

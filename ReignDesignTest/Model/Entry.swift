@@ -47,10 +47,31 @@ class Entry: Object {
         return timeSinceCreated;
     }
     
+    //MARK: Class methods
+    
+    class func getAllEntries() ->[Entry]{
+        var entriesArray = [Entry]()
+        let allEntries = try! Realm().objects(Entry)
+        var counter = 0
+        
+        for entry in allEntries{
+           entriesArray.insert(entry, atIndex: counter++)
+        }
+        
+        return entriesArray
+    }
+    
     class func deleteAllEntries(){
         let realm = try! Realm()
         realm.write { () -> Void in
             realm.deleteAll()
         }
+    }
+    
+    class func deleteEntry(object: Entry){
+        let realm = try! Realm()
+        realm.write({ () -> Void in
+            realm.delete(object)
+        })
     }
 }

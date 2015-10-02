@@ -18,6 +18,8 @@
 		A855B2E71BBCBD3800129501 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2E61BBCBD3800129501 /* RequestHelper.swift */; settings = {ASSET_TAGS = (); }; };
 		A855B2E91BBCBE4600129501 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2E81BBCBE4600129501 /* GlobalConstants.swift */; settings = {ASSET_TAGS = (); }; };
 		A855B2EB1BBCC16100129501 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B2EA1BBCC16100129501 /* Entry.swift */; settings = {ASSET_TAGS = (); }; };
+		A88A2C5C1BBDFB45004FA234 /* EntryWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2C5B1BBDFB45004FA234 /* EntryWebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A88A2C5E1BBE3D70004FA234 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2C5D1BBE3D70004FA234 /* ViewHelper.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		A855B2E61BBCBD3800129501 /* RequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestHelper.swift; path = Library/RequestHelper.swift; sourceTree = "<group>"; };
 		A855B2E81BBCBE4600129501 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalConstants.swift; path = Application/GlobalConstants.swift; sourceTree = "<group>"; };
 		A855B2EA1BBCC16100129501 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Model/Entry.swift; sourceTree = "<group>"; };
+		A88A2C5B1BBDFB45004FA234 /* EntryWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryWebViewController.swift; path = Views/EntryWebViewController.swift; sourceTree = "<group>"; };
+		A88A2C5D1BBE3D70004FA234 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewHelper.swift; path = Library/ViewHelper.swift; sourceTree = "<group>"; };
 		BAF675FC029EAADE67CA1CEF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CD4E1F8F0604E276E39F3C61 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1161CBA6454BED3FEBF6A13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A855B2DE1BBCA34800129501 /* ViewController.swift */,
+				A88A2C5B1BBDFB45004FA234 /* EntryWebViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				A855B2E61BBCBD3800129501 /* RequestHelper.swift */,
+				A88A2C5D1BBE3D70004FA234 /* ViewHelper.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -380,11 +386,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88A2C5C1BBDFB45004FA234 /* EntryWebViewController.swift in Sources */,
 				A855B2EB1BBCC16100129501 /* Entry.swift in Sources */,
 				A855B2E71BBCBD3800129501 /* RequestHelper.swift in Sources */,
 				A855B2E11BBCA35000129501 /* AppDelegate.swift in Sources */,
 				A855B2E91BBCBE4600129501 /* GlobalConstants.swift in Sources */,
 				A855B2DF1BBCA34800129501 /* ViewController.swift in Sources */,
+				A88A2C5E1BBE3D70004FA234 /* ViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

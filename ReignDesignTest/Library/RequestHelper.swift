@@ -21,7 +21,7 @@ class RequestHelper: NSObject {
             Alamofire.request(.GET, GlobalConstants.ServerAddress.address)
                 .responseJSON { response in
                     //Delete all previous saved entries
-                    Entry .deleteAllEntries()
+                    Entry.deleteAllEntries()
                     //Now get the response
                     let responseDictionary = response.2.value as! NSDictionary
                     //After that, get all the entries returned by the server
@@ -40,6 +40,7 @@ class RequestHelper: NSObject {
     }
     
     func startNetworkNotifier(){
+        //This function would be periodically checking if network is available
         self.isNetworkAvailable = reachability!.isReachable()
         
         reachability!.whenReachable = { reachability in
@@ -50,9 +51,5 @@ class RequestHelper: NSObject {
         }
         
         reachability!.startNotifier()
-    }
-    
-    func stopNetworkNotifier(){
-        reachability!.stopNotifier()
     }
 }

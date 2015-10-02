@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tech news-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ReignDesignTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,12 +22,30 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="oms-Lu-Uy0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="DbH-04-wbL" detailTextLabel="Ekg-4h-vHM" style="IBUITableViewCellStyleSubtitle" id="oms-Lu-Uy0">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oms-Lu-Uy0" id="dah-3N-fxh">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DbH-04-wbL">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ekg-4h-vHM">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -48,7 +66,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4kE-qC-rYb" secondAttribute="bottom" id="xet-IT-WCr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d93-pL-HDS"/>
+                    <navigationItem key="navigationItem" title="Tech news" id="d93-pL-HDS"/>
                     <connections>
                         <outlet property="entriesTableView" destination="4kE-qC-rYb" id="hwm-PJ-WCQ"/>
                         <segue destination="pow-9Y-IcC" kind="show" identifier="showEntry" id="Q2I-Ou-fMB"/>
@@ -58,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="1152" y="347"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry Web View Controller-->
         <scene sceneID="rrO-Mt-vzh">
             <objects>
-                <viewController id="pow-9Y-IcC" sceneMemberID="viewController">
+                <viewController id="pow-9Y-IcC" customClass="EntryWebViewController" customModule="ReignDesignTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XiA-7f-hHm"/>
                         <viewControllerLayoutGuide type="bottom" id="khL-FH-wzr"/>
@@ -85,6 +103,9 @@
                             <constraint firstItem="UvU-SX-7Qf" firstAttribute="width" secondItem="wnU-jS-8R6" secondAttribute="width" id="hQh-8i-Vbn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="entryWebView" destination="UvU-SX-7Qf" id="hTY-bN-StC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgH-fD-6Nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
