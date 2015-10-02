@@ -70,6 +70,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         ViewHelper.showMessageToUser("Network error", message: "There's no internet connection, please try again later.", viewController: self)
     }
     
+    func addPullToRefreshToTable(){
+        entriesTableView.addPullToRefresh({ [weak self] in
+            // refresh code
+            self?.requestData()
+            })
+    }
+    
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -133,15 +140,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             entriesArray.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
-    }
-    
-    //MARK: Pull to refresh methods
-    
-    func addPullToRefreshToTable(){
-        entriesTableView.addPullToRefresh({ [weak self] in
-            // refresh code
-            self?.requestData()
-            })
     }
     
     //MARK: - Navigation

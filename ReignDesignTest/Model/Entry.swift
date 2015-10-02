@@ -31,8 +31,9 @@ class Entry: Object {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZ"
         formatter.timeZone = NSTimeZone(name: "UTC")
         createdAt = formatter.dateFromString(dateString)!
-        let realm = try! Realm()
         
+        //The last thing is to save data in database
+        let realm = try! Realm()
         realm.write { () -> Void in
             realm.add(self)
         }
@@ -54,10 +55,12 @@ class Entry: Object {
         let allEntries = try! Realm().objects(Entry)
         var counter = 0
         
+        //We will transform list to array, so we can manipulate it better in the view controller
         for entry in allEntries{
            entriesArray.insert(entry, atIndex: counter++)
         }
         
+        //We sort de array by date
         entriesArray = entriesArray.sort({$0.createdAt.compare($1.createdAt) == .OrderedDescending })
         
         return entriesArray
